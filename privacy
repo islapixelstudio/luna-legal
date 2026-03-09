@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy – NoteAI</title>
+  <meta name="robots" content="index,follow" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg: #0b0b10;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.04);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.55);
+      --border: rgba(255,255,255,.10);
+      --accent: #8ab4ff;
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --card: rgba(0,0,0,.04);
+        --card2: rgba(0,0,0,.03);
+        --text: rgba(0,0,0,.88);
+        --muted: rgba(0,0,0,.62);
+        --muted2: rgba(0,0,0,.48);
+        --border: rgba(0,0,0,.10);
+        --accent: #1b5cff;
+        --shadow: 0 16px 50px rgba(0,0,0,.10);
+      }
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% -10%, rgba(138,180,255,.22), transparent 55%),
+        radial-gradient(900px 600px at 95% 0%, rgba(159,122,234,.18), transparent 50%),
+        radial-gradient(900px 700px at 50% 115%, rgba(79,209,197,.12), transparent 55%),
+        var(--bg);
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    p,li{line-height:1.65;color:var(--muted)}
+    h1,h2,h3{color:var(--text);letter-spacing:-.02em}
+    h1{font-size:34px;margin:0 0 8px}
+    h2{font-size:18px;margin:28px 0 10px}
+    h3{font-size:14px;margin:16px 0 8px;color:var(--text)}
+    code{font-family:var(--mono);font-size:.95em;background:var(--card2);border:1px solid var(--border);padding:2px 7px;border-radius:10px}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 18px 60px}
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    @media (prefers-color-scheme: light){
+      .topbar{
+        background: linear-gradient(to bottom, rgba(246,247,251,.85), rgba(246,247,251,0));
+        border-bottom:1px solid rgba(0,0,0,.06);
+      }
+    }
+    .topbar .wrap{padding:14px 18px}
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-height:28px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:99px;
+      background: linear-gradient(135deg, rgba(138,180,255,1), rgba(159,122,234,1));
+      box-shadow: 0 10px 30px rgba(138,180,255,.25);
+      flex:0 0 auto;
+    }
+    .brand strong{font-weight:700}
+    .brand span{color:var(--muted2);font-size:13px}
+
+    .hero{padding:18px 0 6px}
+    .meta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:12px;
+    }
+    .pill{
+      font-size:12px; color:var(--muted);
+      background:var(--card2);
+      border:1px solid var(--border);
+      padding:7px 10px;
+      border-radius:999px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+    }
+    @media (min-width: 980px){
+      .layout{grid-template-columns: 280px 1fr; align-items:start}
+    }
+
+    .toc{
+      padding:16px;
+    }
+    .toc h2{margin:0 0 10px; font-size:14px; color:var(--text)}
+    .toc a{
+      display:block;
+      padding:8px 10px;
+      border-radius:12px;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .toc a:hover{
+      background:var(--card2);
+      border-color:var(--border);
+      text-decoration:none;
+      color:var(--text);
+    }
+    .toc small{display:block; color:var(--muted2); margin:10px 0 0; line-height:1.4}
+    .content{
+      padding:18px 18px 8px;
+    }
+    .section{
+      padding:0 0 14px;
+      border-top:1px solid rgba(255,255,255,.06);
+      margin-top:18px;
+    }
+    @media (prefers-color-scheme: light){
+      .section{border-top:1px solid rgba(0,0,0,.06)}
+    }
+    .section:first-of-type{border-top:none;margin-top:0}
+    .hint{
+      background:var(--card2);
+      border:1px solid var(--border);
+      border-radius:var(--radius2);
+      padding:12px 12px;
+      color:var(--muted);
+      margin:14px 0 0;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+      margin:12px 0 4px;
+    }
+    @media(min-width:720px){
+      .grid2{grid-template-columns:1fr 1fr}
+    }
+    .box{
+      background:var(--card2);
+      border:1px solid var(--border);
+      border-radius:var(--radius2);
+      padding:12px 12px;
+    }
+    .box b{color:var(--text)}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .footer{
+      padding:14px 18px 18px;
+      border-top:1px solid rgba(255,255,255,.06);
+      color:var(--muted2);
+      font-size:13px;
+    }
+    @media (prefers-color-scheme: light){
+      .footer{border-top:1px solid rgba(0,0,0,.06)}
+    }
+
+    /* Print-friendly */
+    @media print{
+      body{background:white;color:black}
+      .topbar{position:static;background:none;border:none}
+      .card{box-shadow:none}
+      .toc{display:none}
+      a{color:black;text-decoration:underline}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="dot" aria-hidden="true"></div>
+        <div>
+          <strong>NoteAI</strong>
+          <span>Privacy Policy</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Privacy Policy</h1>
+      <div class="meta" aria-label="Policy metadata">
+        <div class="pill">Last updated: <b>March 2, 2026</b></div>
+        <div class="pill">Applies to: <b>NoteAI iOS App</b></div>
+        <div class="pill">Contact: <b>noteai.team@gmail.com</b></div>
+      </div>
+      <p style="margin-top:14px">
+        This Privacy Policy explains what information we collect and process, how we use it, and when it may be
+        shared with service providers (including third-party AI services) to deliver app features.
+      </p>
+    </div>
+
+    <div class="layout">
+      <nav class="card toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <a href="#definitions">Definitions</a>
+        <a href="#data">Data we collect & process</a>
+        <a href="#ai">AI processing & consent</a>
+        <a href="#use">How we use data</a>
+        <a href="#sharing">Sharing & service providers</a>
+        <a href="#retention">Retention</a>
+        <a href="#transfer">International transfers</a>
+        <a href="#choices">Your choices</a>
+        <a href="#security">Security</a>
+        <a href="#children">Children’s privacy</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+        <small>
+          Tip: App Review typically checks that AI providers are named, the transmitted data types are stated,
+          and users consent before data is sent.
+        </small>
+      </nav>
+
+      <article class="card content">
+        <section class="section" id="definitions">
+          <h2>Definitions</h2>
+          <p><b>Company</b> (“we”, “us”, “our”) refers to NoteAI.</p>
+          <p><b>Service</b> refers to the NoteAI iOS application.</p>
+          <p><b>Personal Data</b> means information that relates to an identified or identifiable individual.</p>
+          <p><b>User Content</b> means content you provide to the Service, such as audio recordings, transcripts, and text.</p>
+          <p><b>Service Provider</b> means a third party that processes data on our behalf to support or deliver features of the Service.</p>
+        </section>
+
+        <section class="section" id="data">
+          <h2>Data we collect & process</h2>
+          <div class="grid2">
+            <div class="box">
+              <b>User Content</b>
+              <ul>
+                <li>Audio recordings you upload or record (for transcription).</li>
+                <li>Transcripts generated from audio.</li>
+                <li>Text you input (notes, prompts, and content used to generate summaries or chat responses).</li>
+                <li>Imported content identifiers (e.g., a YouTube link you provide to request a transcript).</li>
+              </ul>
+            </div>
+            <div class="box">
+              <b>Account & App Data</b>
+              <ul>
+                <li>Email address (if you create an account or contact support).</li>
+                <li>Internal user/account identifiers (to keep you signed in and associate data with your account).</li>
+                <li>Subscription status/entitlements (to enable premium features).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <b>Usage & Diagnostics</b>
+            <ul>
+              <li>Device information (OS version, device model), app version, timestamps.</li>
+              <li>Crash logs and performance data for reliability and troubleshooting.</li>
+              <li>IP address may be processed by our servers/service providers when you use online features.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="ai">
+          <h2>AI processing & consent (third‑party AI services)</h2>
+          <p>
+            NoteAI uses third-party AI service providers to deliver certain features such as speech-to-text transcription
+            and AI-generated summaries.
+          </p>
+
+          <h3>What data is sent</h3>
+          <ul>
+            <li><b>Transcription:</b> audio recordings (and technical metadata needed to complete transcription).</li>
+            <li><b>Summaries / custom summaries:</b> transcript text and/or text you provide for summarization.</li>
+          </ul>
+
+          <h3>Who the data is sent to</h3>
+          <ul>
+            <li><b>AssemblyAI</b> – speech-to-text transcription</li>
+            <li><b>OpenAI</b> – text generation / summarization</li>
+          </ul>
+
+          <h3>Permission</h3>
+          <p>
+            Before the Service sends your content to third-party AI providers, we present an in‑app disclosure and request
+            your permission. If you do not consent, AI processing features will not be used.
+          </p>
+
+          <h3>Purpose limitation</h3>
+          <p>
+            We send your content to AI providers only to perform the requested feature and return results to the app.
+            We do not sell your user content.
+          </p>
+        </section>
+
+        <section class="section" id="use">
+          <h2>How we use data</h2>
+          <ul>
+            <li>Provide and maintain the Service (transcription, summaries, and related features).</li>
+            <li>Operate accounts and keep users signed in (where applicable).</li>
+            <li>Manage subscriptions and entitlement validation.</li>
+            <li>Provide support and respond to requests.</li>
+            <li>Improve reliability, security, and prevent abuse/fraud.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="sharing">
+          <h2>Sharing & service providers</h2>
+          <p>We may share data with Service Providers who help us operate the Service, including:</p>
+          <ul>
+            <li><b>AI processing providers</b> (as described above).</li>
+            <li><b>Cloud hosting / backend infrastructure</b> (to store and deliver app data securely).</li>
+            <li><b>Subscription management</b> (to validate purchases and entitlement status).</li>
+            <li><b>Analytics / diagnostics</b> (to measure performance and fix crashes, if enabled).</li>
+          </ul>
+          <div class="hint">
+            If you use specific vendors (e.g., Firebase, Google Cloud, RevenueCat, Meta SDK), list them explicitly here.
+            Apple reviewers often cross‑check the policy against the app’s SDKs and App Store privacy answers.
+          </div>
+        </section>
+
+        <section class="section" id="retention">
+          <h2>Retention</h2>
+          <p>
+            We retain Personal Data only as long as necessary for the purposes described in this Policy, including
+            providing the Service, complying with legal obligations, resolving disputes, and enforcing agreements.
+          </p>
+          <ul>
+            <li><b>Account information:</b> retained while your account is active and for a limited period after closure if needed.</li>
+            <li><b>User content:</b> retained as needed to provide features and store your notes/transcripts, unless you delete it or request deletion.</li>
+            <li><b>Usage/diagnostic data:</b> retained for a limited period for security and troubleshooting.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="transfer">
+          <h2>International transfers</h2>
+          <p>
+            Your information may be processed in countries other than your own. Where required by applicable law,
+            we implement safeguards for international transfers of Personal Data.
+          </p>
+        </section>
+
+        <section class="section" id="choices">
+          <h2>Your choices</h2>
+          <ul>
+            <li>You can decline AI consent in the app; without consent, AI processing features remain disabled.</li>
+            <li>You may request access, correction, or deletion by contacting us.</li>
+            <li>You may delete content within the app where those controls are available.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="security">
+          <h2>Security</h2>
+          <p>
+            We use commercially reasonable safeguards designed to protect your information. However, no method of
+            transmission over the Internet or electronic storage is 100% secure.
+          </p>
+        </section>
+
+        <section class="section" id="children">
+          <h2>Children’s privacy</h2>
+          <p>
+            The Service is not directed to children under 16 and we do not knowingly collect personal information from
+            children under 16. If you believe a child has provided Personal Data, contact us so we can take appropriate action.
+          </p>
+        </section>
+
+        <section class="section" id="changes">
+          <h2>Changes</h2>
+          <p>
+            We may update this Privacy Policy from time to time. We will post the updated version on this page and update
+            the “Last updated” date.
+          </p>
+        </section>
+
+        <section class="section" id="contact">
+          <h2>Contact</h2>
+          <p>If you have questions about this Privacy Policy, contact us:</p>
+          <ul>
+            <li>Email: <a href="mailto:noteai.team@gmail.com">noteai.team@gmail.com</a></li>
+          </ul>
+        </section>
+
+        <div class="footer">
+          © <span id="year"></span> NoteAI. All rights reserved.
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    // Non-essential, safe enhancement
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
